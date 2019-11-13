@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="tvNum"
+            type="Integer"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4DD0E1"
+        >
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />-->
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="200sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@{tvNum}"
+            />
+
+        <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="add"
+            app:layout_constraintTop_toBottomOf="@id/tv_number"
+            app:layout_constraintLeft_toLeftOf="@id/tv_number"
+            app:layout_constraintRight_toRightOf="@id/tv_number"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

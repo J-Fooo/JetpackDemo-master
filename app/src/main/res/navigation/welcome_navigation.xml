@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/welcome_navigation"
+            app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.demo.jetpack.fragment.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:enterAnim="@anim/common_slide_in_right"
+            app:exitAnim="@anim/common_slide_out_left"
+            app:popEnterAnim="@anim/common_slide_in_left"
+            app:popExitAnim="@anim/common_slide_out_right"
+            app:destination="@id/registerFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.demo.jetpack.fragment.welcome.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:enterAnim="@anim/common_slide_in_right"
+            app:exitAnim="@anim/common_slide_out_left"
+            app:popEnterAnim="@anim/common_slide_in_left"
+            app:popExitAnim="@anim/common_slide_out_right"
+            app:destination="@id/registerFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.demo.jetpack.fragment.welcome.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <argument
+            android:name="REGISTER_PARAMS"
+            android:defaultValue="2005@qq.com"
+            app:argType="string"/>
+    </fragment>
+</navigation>
