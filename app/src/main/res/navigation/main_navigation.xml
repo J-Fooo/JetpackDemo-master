@@ -9,7 +9,8 @@
         android:id="@+id/homeFragment"
         android:name="com.demo.jetpack.fragment.main.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+    </fragment>
     <fragment
         android:id="@+id/likeFragment"
         android:name="com.demo.jetpack.fragment.main.LikeFragment"

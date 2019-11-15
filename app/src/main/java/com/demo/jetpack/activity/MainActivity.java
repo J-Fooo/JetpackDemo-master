@@ -42,7 +42,9 @@ public class MainActivity extends BaseActivity {
         mBottomNav.enableAnimation(false);
         NavigationUI.setupWithNavController(mBottomNav, navController);
 
+        //设置气泡位置和数目
         addBadgeAt(2,99);
+
     }
 
     private Badge addBadgeAt(int position, int number) {
